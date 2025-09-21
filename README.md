@@ -8,7 +8,7 @@ at these points with L/com/yourclass replace with the path of the activity you w
 
 
 When packaging a zip file, organize it like this. 
-
+```
 assetpacks.zip 
 |————assetpacks/ 
   |---------pack1/ | 
@@ -18,9 +18,9 @@ assetpacks.zip
        |------fileA.dat 
        |------fileB.dat 
   |----------config.json 
-  
-This would be the wrong structure. 
-
+```  
+**Wrong structure**
+```
 assetpacks.zip 
 |———————files/ 
  |——————assetpacks/ 
@@ -31,7 +31,7 @@ assetpacks.zip
        |------fileA.dat 
        |------fileB.dat 
   |----------config.json 
-   
+  ``` 
    In this example I gave, I used assetpack extraction. Instead of zipping the files/assetpacks folder, I used smali to understand that the correct structure is zipping the contents of the files/ folder. That is, you would only zip the assetpacks folder.
    
 Tip: the line: const-string v0, "assetpacks.zip", can be changed to any zip file name
